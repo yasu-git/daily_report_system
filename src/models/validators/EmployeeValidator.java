@@ -46,7 +46,7 @@ public class EmployeeValidator {
             EntityManager em = DBUtil.createEntityManager();
 
             //データーベースに指定したコードの番号が何件あるか入れる
-            long employees_count = (long) em.createNamedQuery("checkRegisterdcode", Long.class)
+            long employees_count = (long) em.createNamedQuery("checkRegisterdCode", Long.class)
                     //setParameterで指定したコードに受け取ったcodeを入れる
                     .setParameter("code", code)
                     .getSingleResult();
