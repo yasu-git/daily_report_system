@@ -12,7 +12,27 @@
     <body>
         <div id="wrapper">
             <div id="header">
-                <h1>日報管理システム</h1>
+                <div id="header_menu">
+                    <h1><a href="<c:url value='/' />">日報管理システム</a></h1>&nbsp;&nbsp;&nbsp;
+                    <!-- ログインしているとき表示される ここから -->
+                    <c:if test="${sessionScope.login_employee != null}">
+                        <!-- 管理者権限があるときだけ表示される ここから-->
+                        <c:if test="${sessionScope.login_employee.admin_flag == 1}">
+                            <a href="<c:url value='/employees/index' />">従業員管理</a>&nbsp;
+                        </c:if>
+                        <!-- 管理者権限があるときだけ表示される ここまで -->
+                        <a href="<c:url value='reports/index' />">日報管理</a>&nbsp;
+                    </c:if>
+                    <!-- ログインしているとき表示される ここまで -->
+                </div>
+                <!-- ログインしているとき表示されるlogout ここから -->
+                <c:if test="${sessionScope.login_employee != null}">
+                    <div id="employee_name">
+                        <c:out value="${sessionScope.login_employee.name}"/>&nbsp;さん&nbsp;&nbsp;&nbsp;
+                        <a href="<c:url value='/logout' />">ログアウト</a>
+                    </div>
+                </c:if>
+                <!-- ログインしているとき表示されるlogout ここまで -->
             </div>
             <div id="content">
                 ${param.content}
