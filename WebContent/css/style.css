@@ -86,7 +86,7 @@ a {
     text-decoration: none;
     color: #24738e;
 }
-
+/*table*/
 table, tr, th, td {
     border: 1px solid #cccccc;
 }
@@ -106,10 +106,6 @@ td {
     padding: 10px 2%;
 }
 
-button {
-    font-size: 14px;
-    padding: 5px 10px;
-}
 
 table#employee_list th {
     width: 30% padding: 10px 2%;
@@ -123,10 +119,35 @@ tr.row2 {
     background-color: #ffffff;
 }
 
+table#report_list th {
+    font-weight: bold;
+    padding: 10px 2%;
+}
+/*table report_list*/
+table#report_list .report_name {
+    width: 20%;
+    padding: 10px 2%;
+}
+table#report_list .report_date {
+    width: 20%;
+}
+
+table#report_list .report_title {
+    width: 37%;
+}
+
+table#report_list .report_action {
+    width: 13%;
+}
+
 select {
     height: 30px;
 }
 
+button {
+    font-size: 14px;
+    padding: 5px 10px;
+}
 /*footer*/
 #footer {
     text-align: center;
