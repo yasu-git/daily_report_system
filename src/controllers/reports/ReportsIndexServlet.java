@@ -54,6 +54,11 @@ public class ReportsIndexServlet extends HttpServlet {
 
         em.close();
 
+        /*
+         * レポートオブジェクト
+         * レポートの数
+         * ページ数
+         */
         request.setAttribute("reports", reports);
         request.setAttribute("reports_count", reports_count);
         request.setAttribute("page", page);

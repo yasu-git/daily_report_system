@@ -123,7 +123,7 @@ table#report_list th {
     font-weight: bold;
     padding: 10px 2%;
 }
-/*table report_list*/
+/*table report_list 幅指定*/
 table#report_list .report_name {
     width: 20%;
     padding: 10px 2%;
