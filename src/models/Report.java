@@ -25,6 +25,16 @@ import javax.persistence.Table;
         @NamedQuery(
                 name = "getReportsCount",
                 query = "SELECT COUNT(r) FROM Report AS r"
+                ),
+        //ログインしている人のレポートを取得
+        @NamedQuery(
+                name = "getMyAllReports",
+                query = "SELECT r FROM Report AS r WHERE r.employee = :employee ORDER BY r.id DESC"
+                ),
+        //ログインしている人のレポートの数を取得
+        @NamedQuery(
+                name = "getMyReportsCount",
+                query = "SELECT COUNT(r) FROM Report AS r WHERE r.employee = :employee"
                 )
 })
 
