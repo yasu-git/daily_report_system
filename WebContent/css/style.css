@@ -86,6 +86,10 @@ a {
     text-decoration: none;
     color: #24738e;
 }
+
+pre {
+    font-family: "Hiragino Kaku Gothic Pro",Meiryo,"MS PGothic",Helvetica,Arial,sans-serif;
+}
 /*table*/
 table, tr, th, td {
     border: 1px solid #cccccc;

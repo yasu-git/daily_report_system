@@ -54,6 +54,7 @@ public class ReportsCreateServlet extends HttpServlet {
             Date report_date = new Date(System.currentTimeMillis());
             String rd_str = request.getParameter("report_date");
 
+            //rd__strがnullか空ではなかったら
             if(rd_str != null && !rd_str.equals("")){
                 //Stringで受け取った日付をDate型に変換する処理
                 report_date = Date.valueOf(request.getParameter("report_date"));
