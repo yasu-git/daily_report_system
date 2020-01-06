@@ -21,7 +21,8 @@
                             <a href="<c:url value='/employees/index' />">従業員管理</a>&nbsp;
                         </c:if>
                         <!-- 管理者権限があるときだけ表示される ここまで -->
-                        <a href="<c:url value='reports/index' />">日報管理</a>&nbsp;
+                        <a href="<c:url value='/reports/index' />">日報管理</a>&nbsp;
+                        <a href="<c:url value='/follows/index' />">follower</a>&nbsp;
                     </c:if>
                     <!-- ログインしているとき表示される ここまで -->
                 </div>
